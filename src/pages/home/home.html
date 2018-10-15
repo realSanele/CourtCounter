@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <!--style="background: orange;"-->
+    <ion-title>
+      Court Counter
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-item>
+    <ion-label floating>Score</ion-label>
+    <ion-input [(ngModel)]="value" type="number"></ion-input>
+    <div>{{value}}</div>
+  </ion-item>
+  <button ion-button full (click)="onClick()">Add</button>-->
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col><h4>Team A</h4></ion-col>
+      <ion-col><h4>Team B</h4></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>{{scoreA}}</ion-col>
+      <ion-col>{{scoreB}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="buttons">
+        <button ion-button full (click)="teamAThreePoints()">+3 POINTS</button><br>
+        <button ion-button full (click)="teamATwoPoints()">+2 POINTS</button><br>
+        <button ion-button full (click)="teamAFreePoint()">FREE THROW</button><br>
+      </ion-col>
+      <div class="right"></div>
+      <ion-col class="buttons">
+        <button ion-button full (click)="teamBThreePoints()">+3 POINTS</button><br>
+        <button ion-button full (click)="teamBTwoPoints()">+2 POINTS</button><br>
+        <button ion-button full (click)="teamBFreePoint()">FREE THROW</button><br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <footer>
+    <button ion-button (click)="reset()">RESET</button>
+  </footer>
+</ion-content>
